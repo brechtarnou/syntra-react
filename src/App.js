@@ -1,10 +1,12 @@
-import Jokes from "./Jokes";
+// import Jokes from "./Jokes";
 import "./App.css";
+import Todos from "./Todos";
 
 function App() {
   return (
     <div className="App">
-      <Jokes />
+      {/* <Jokes /> */}
+      <Todos />
     </div>
   );
 }
