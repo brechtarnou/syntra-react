@@ -15,6 +15,7 @@ const Todos = () => {
     setTodoInput("");
     setTodos([...todos, newTodo]);
   };
+
   const updateTodo = (id) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -23,6 +24,7 @@ const Todos = () => {
           status: todo.status === "done" ? "in_progress" : "done",
         };
       }
+      //If you do not return you automatically return undefined. If one of the elements of the array does not reach the if statement, and you would not have a return some of the elements will be undefined
       return todo;
     });
     setTodos(newTodos);
