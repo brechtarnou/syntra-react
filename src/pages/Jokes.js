@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import Categories from "./Categories";
+import Categories from "../components/Categories";
 const Jokes = () => {
   const [joke, setJoke] = useState("");
   const [category, setCategory] = useState("");

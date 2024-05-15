@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Todo from "./Todo";
+import Todo from "../components/Todo";
+import ThemeLayout from "../components/ThemeLayout";
 
 const Todos = () => {
   const [todos, setTodos] = useState([]);
   const [todoInput, setTodoInput] = useState("");
-
   const addTodo = () => {
     const newTodo = {
       name: todoInput,
@@ -34,7 +34,7 @@ const Todos = () => {
     setTodos(newTodos);
   };
   return (
-    <>
+    <ThemeLayout>
       <input value={todoInput} onChange={(e) => setTodoInput(e.target.value)} />
       <button onClick={addTodo}>Add</button>
       <h3>In progress</h3>
@@ -53,7 +53,7 @@ const Todos = () => {
             <Todo todo={todo} updateTodo={updateTodo} removeTodo={removeTodo} />
           );
         })}
-    </>
+    </ThemeLayout>
   );
 };
 

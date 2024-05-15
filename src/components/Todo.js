@@ -22,6 +22,7 @@ export default Todo;
 
 /**
  * https://reactrouter.com/en/main
+ *  npm install react-router-dom
  * BrowserRouter
  * Routes
  * Route -> path (dynamic paths are with :keyword)-> the keyword will be the key in the params object
